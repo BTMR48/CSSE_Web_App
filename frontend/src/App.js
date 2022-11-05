@@ -9,6 +9,7 @@ import Footer from './components/Footer/Footer';
 import AccountBalance from './components/PaymentManagement/AccountBalance/AccountBalance';
 import Recharge from './components/PaymentManagement/Recharge/Recharge';
 import MonthlyPass from './components/passManagement/MonthlyPass';
+import WeeklyPass from './components/passManagement/WeeklyPass '
 
 
 function App() {
@@ -23,7 +24,8 @@ function App() {
             <PrivateRoute path="/" exact component={Home} /> 
             <Route path="/balance" exact component={AccountBalance} /> 
             <Route path="/recharge" exact component={Recharge} /> 
-            <Route path="/pass" exact component={MonthlyPass} /> 
+            <Route path="/mpass" exact component={MonthlyPass} /> 
+            <Route path="/wpass" exact component={WeeklyPass} /> 
             
             
             <Footer/>

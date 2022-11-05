@@ -13,8 +13,7 @@ app.use(cors());
 
 const UserRouter = require("./routes/userrouter");
 const MonthlyPassRouter = require("./routes/monthlypassrouter");
-const WeeklyPassRouter = require("./routes/weeklypassrouter");
-
+const WeeklyPassRouter = require("./routes/weeklypassrouter ")
 
 //getting the database url
 const URL = process.env.MONGODB_URL;
@@ -33,10 +32,9 @@ connection.once("open", function() {
     console.log("RIDER ticketing system db connection success");
 }); 
 
-app.use("/users",UserRouter);
-app.use("/mpass",MonthlyPassRouter);
-app.use("/wpass",WeeklyPassRouter);
-
+app.use("/users", UserRouter);
+app.use("/mpass", MonthlyPassRouter);
+app.use("/wpass", WeeklyPassRouter)
 
 //defining a port to run the application
 //use port 8070 or use any other port if the 8070 is unavailable 

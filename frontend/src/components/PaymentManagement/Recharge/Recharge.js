@@ -73,7 +73,7 @@ export default function Recharge() {
           <div className="row">
             <div className="col-12">
             <div className="col-xl-16" align="center">
-                <h6>Current Balance: {pcredit}$</h6>
+                <h6>Current Balance: {pcredit}LKR</h6>
             </div>
               <div div className="row">
                 <h4>Payment methods</h4>
@@ -149,7 +149,7 @@ export default function Recharge() {
                       }}
                       inputProps={{ style: { padding: 12 } }}
                       startAdornment={
-                        <InputAdornment position="start">$</InputAdornment>
+                        <InputAdornment position="start">LKR</InputAdornment>
                       }
                     />
                   </div>

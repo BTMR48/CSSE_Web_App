@@ -15,7 +15,10 @@ function Home() {
   }
 
   function MonthlyPass() {
-    history.push(`/pass`);
+    history.push(`/mpass`);
+  }
+  function WeeklyPass() {
+    history.push(`/wpass`);
   }
 
 
@@ -69,7 +72,7 @@ function Home() {
           </div>
           <div className="col-md-4" style={{ paddingLeft: 200 }}>
             <div className="progressCards">
-              <div onClick={MonthlyPass}>
+              <div onClick={WeeklyPass}>
                 <div className="pp">
                   <div align="center">
                     <h2>Get Weekly Pass</h2>

@@ -67,15 +67,15 @@ export default function MonthlyPass() {
         await axios
             .post(`http://localhost:8070/wpass/add`, newPass, config)
             .then((res) => {
-                alert("Successfully Subscribed to Monthly Pass");
+                alert("Successfully Subscribed to Weekly Pass");
                 console.log(res)
                 balanceCredit();
             })
         .catch((error) => {
             if (error.response.status ===409 ){
-                alert("You have already subscribed to this month");
+                alert("You have already subscribed to this Week");
             }else {
-                alert("Failed to subscribed to monthly Pass");
+                alert("Failed to subscribed to weekly Pass");
             }
         });
     }else {
@@ -114,8 +114,16 @@ export default function MonthlyPass() {
     'January','February','March','April','May','June','July', 'August', 'September', 'October', 'November', 'December'
     ];
 
-    const handleChange = (event) => {
+  const weeks =[
+    'Week1','Week2','Week3','Week4'
+    ];
+
+    const handleChangeMonthly = (event) => {
         setMonth(event.target.value);
+      };
+
+    const handleChangeWeekly = (event) => {
+        setWeek(event.target.value);
       };
 
   return (
@@ -128,7 +136,7 @@ export default function MonthlyPass() {
           <div className="row">
             <div className="col-12">
             <div className="col-xl-16" align="center">
-                <h6>Current Balance: {pcredit}$</h6>
+                <h6>Current Balance: {pcredit}LKR</h6>
             </div>
               <div div className="row">
                 <br></br>
@@ -179,7 +187,7 @@ export default function MonthlyPass() {
                                 labelId="demo-mutiple-chip-label"
                                 id="demo-mutiple-chip"
                                 fullWidth
-                                onChange={handleChange}
+                                onChange={handleChangeMonthly}
                                 input={<OutlinedInput id="select-multiple-chip" />}
                                 >
                                 {months.map((months) => (
@@ -191,9 +199,30 @@ export default function MonthlyPass() {
                     </div>
                   
                 </div>
+
+                <div className="col-md-12 mb-4">
+                    <div className="form-group" > 
+                        <InputLabel align="left" id="demo-mutiple-chip-label">Week</InputLabel>
+                        <br/>
+                            <Select
+                                labelId="demo-mutiple-chip-label"
+                                id="demo-mutiple-chip"
+                                fullWidth
+                                onChange={handleChangeWeekly}
+                                input={<OutlinedInput id="select-multiple-chip" />}
+                                >
+                                {weeks.map((weeks) => (
+                                    <MenuItem key={weeks} value={weeks} >
+                                    {weeks}
+                                    </MenuItem>
+                                ))}
+                            </Select>
+                    </div>
+                  
+                </div>
                 <div className="col-md-12 mb-4">
                     <div className="col-xl-16" align="center">
-                        <h4>Total Amount for Pass : {total}$</h4>
+                        <h4>Total Amount for Pass : {total}LKR</h4>
                     </div>
                 </div>
               </div>

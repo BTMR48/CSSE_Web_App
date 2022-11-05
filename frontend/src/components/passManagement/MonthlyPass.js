@@ -127,7 +127,7 @@ export default function MonthlyPass() {
           <div className="row">
             <div className="col-12">
             <div className="col-xl-16" align="center">
-                <h6>Current Balance: {pcredit}$</h6>
+                <h6>Current Balance: {pcredit}LKR</h6>
             </div>
               <div div className="row">
                 <br></br>
@@ -192,7 +192,7 @@ export default function MonthlyPass() {
                 </div>
                 <div className="col-md-12 mb-4">
                     <div className="col-xl-16" align="center">
-                        <h4>Total Amount for Pass : {total}$</h4>
+                        <h4>Total Amount for Pass : {total}LKR</h4>
                     </div>
                 </div>
               </div>

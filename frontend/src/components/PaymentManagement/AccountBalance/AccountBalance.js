@@ -49,7 +49,7 @@ export default function AccountBalance() {
                 <hr />
                 <br />
                 <div className="col-xl-16" align="center">
-                    <h4>{credit}$</h4>
+                    <h4>{credit}LKR</h4>
                 </div>
               </div>
             </div>
