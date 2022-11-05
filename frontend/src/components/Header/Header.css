@@ -1,0 +1,28 @@
+nav {
+  text-transform: uppercase;
+}
+
+header{
+  margin-bottom: 100px;
+}
+
+.header-title{
+  letter-spacing: 3px;
+  -webkit-text-fill-color: aliceblue;
+}
+
+.header-bg{
+  background-color: #249e34;
+  backdrop-filter: blur(20px);
+}
+
+.btn-outline-primary{
+  border-color: aliceblue;
+  -webkit-text-fill-color: aliceblue;
+
+}
+
+.btn-outline-primary:hover {
+  background-color: black;
+}
+
